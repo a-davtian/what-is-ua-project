@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Project</title>
+<style>
+    body {
+        display: block;
+        text-align: left;
+        background: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/042/397/original/ua-ukraine.jpeg?1659379405), linear-gradient(180.5deg, rgb(0, 128, 128) 8.5%, rgb(174, 206, 100) 118.2%);
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        margin: 20px 50px;
+    }
+    .document-ua {
+        display: block;
+        position: relative;
+        font-family: Helvetica;
+        line-height: 1.5;
+    }
+    h1 {
+        display: block;
+        font-size: 55px;
+        margin: 50px 0px 0px 5px;
+    }
+    h2 {
+        display: block;
+        font-style: italic;
+        margin: 0px 0px 0px 5px;
+    }
+     hr {
+        border: 0.5px solid black;
+        margin: 40px 0px 30px 0px;
+    }
+    .info-ua {
+        display: block;
+        position: relative;
+        text-align: left;
+        max-width: 600px;
+        padding: 15px 0px 15px 5px; 
+        transition: all 500ms ease-in-out;
+    }
+    .info-ua:hover {
+        background: linear-gradient(to top, #dfe9f3 0%, white 100%);
+        opacity: 0.7;
+    }
+    a.link1 {
+        display: block;
+        text-transform: uppercase;
+        text-decoration:none;
+        text-align: left;
+        font-size: 10vw;
+        color:#D4DBBE;
+        font-weight: lighter;
+        width: fit-content;
+        transition: all 500ms ease-in-out;
+    }
+    a.link1:hover {
+        text-decoration: underline 0.7vw;
+        background: linear-gradient(to top, #dfe9f3 0%, white 100%);
+        opacity: 0.7;
+        color: #3a7563;
+        cursor: pointer;
+    }
+    button {
+        display: block;
+        height: 55px;
+        width: 135px;
+        margin: 15px 50px 0px 0px;
+        font-size: 18px;
+        color: #ffffff;
+        background-color:#3a7563;
+        border: 0px none;
+        border-radius: 25px;
+        float: right;
+        transition: all 200ms ease-in-out;
+        box-shadow: 0 0.5px 0.5px 0.5px #3a7563;
+      }
+     button:hover{
+        color: black;
+        background-color: #59a985;
+        cursor: pointer;
+     }
+</style>
+</head>
+<body>
+<div class="document-ua">
+    <div class="help">
+        <button>Help Ukraine</button>
+    </div> 
+    <div class="general-ua">
+        <h1>
+        What is Ukraine?
+        </h1>
+        <h2>
+        Was before the war, and will be after...
+        </h2>
+              <hr>
+    </div>
+    <div class="info-ua">
+        <p>
+           <span class="ua"> Ukraine is <strong>one of the most beautiful countries</strong> in the World. <br /> It is unforgettable for those who wish to see wonderful landscapes, unique attractions, traditional villages and gorgeous nature. <br /> In Ukraine, you can visit ski resorts in the West and sunny beaches in the South. The Carpathian Mountains are protecting Ukraine from cold winds and making summers warm and winters mild.
+       </span> </p>
+    </div>
+    <div class="explore-ua">
+       <a href ="https://youtu.be/WHeOZLmXxn8" class="link1" target="_blank">Explore</a> 
+    </div>
+</div> 
+<script>
+function helpUa() {
+    let name = prompt("What is your fist name?");
+    let help = prompt("Would you like to help Ukraine?");
+    help = help.toLocaleLowerCase().trim();
+    
+    let p = document.querySelector("p");
+    
+    if (help === "yes" ) {
+       p.innerHTML = "Thank you, " + name + "! Please donate to " + "<a href='https://www.comebackalive.in.ua/donate' target='_blank' >Come Back Alive</a>" + " foundation 🙏";
+    } else {
+        p.innerHTML = "Thank you anyway ❤️";
+    }
+}
+let helpUaButton = document.querySelector("button");
+helpUaButton.addEventListener("click", helpUa);
+</script>
+</body>
+</html>
